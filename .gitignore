@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+venv/
+env/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Flask / Python env
+*.db
+*.sqlite3
+backend/instance/
+
+# Firebase service account key (NEVER commit this)
+serviceAccountKey.json
+*serviceAccount*.json
+
+# Node / React
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# Vite build cache
+frontend/vite.config.js.timestamp-*.mjs
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Docker volumes
+pgdata/
+
+# Uploads (if ever stored locally)
+uploads/
+
+# Environments
+.env
+.env.*
+!.env.example

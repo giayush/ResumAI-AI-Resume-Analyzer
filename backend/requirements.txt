@@ -1,0 +1,37 @@
+# Web Framework
+flask==3.0.3
+flask-sqlalchemy==3.1.1
+flask-migrate==4.0.7
+flask-jwt-extended==4.6.0
+flask-cors==4.0.1
+flask-bcrypt==1.0.1
+flask-limiter==3.8.0
+
+# Firebase Admin SDK
+firebase-admin==6.5.0
+requests==2.32.3
+
+# Database
+psycopg2-binary==2.9.9
+
+# Environment
+python-dotenv==1.0.1
+
+# Document Parsing
+pymupdf==1.24.5
+python-docx==1.1.2
+
+# NLP & ML
+spacy==3.7.5
+scikit-learn==1.5.0
+numpy==1.26.4
+
+# AI APIs
+openai==1.35.13
+google-generativeai==0.7.2
+
+# PDF Report Generation
+reportlab==4.2.2
+
+# Production Server
+gunicorn==22.0.0

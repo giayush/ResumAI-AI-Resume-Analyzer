@@ -1,0 +1,14 @@
+{
+  "name": "resumai-root",
+  "version": "1.0.0",
+  "description": "Root package to orchestrate frontend and backend startup.",
+  "scripts": {
+    "start": "node check-env.js && concurrently --handle-input --kill-others-on-fail --success first \"npm run backend\" \"npm run frontend\"",
+    "frontend": "wait-on tcp:5000 && cd frontend && npm run dev -- --open",
+    "backend": "cd backend && python -u run.py"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2",
+    "wait-on": "^9.0.5"
+  }
+}

@@ -1,5 +1,6 @@
 import uuid
 from datetime import datetime, timezone
+from typing import Optional
 from ..extensions import db
 
 
@@ -23,6 +24,24 @@ class Payment(db.Model):
 
     # ── Relationships ──────────────────────────────────────
     user = db.relationship("User", backref=db.backref("payments", lazy="dynamic"))
+
+    def __init__(
+        self,
+        user_id: str,
+        order_id: str,
+        amount: int,
+        currency: str = "INR",
+        status: str = "pending",
+        payment_id: Optional[str] = None,
+        signature: Optional[str] = None,
+    ) -> None:
+        self.user_id = user_id
+        self.order_id = order_id
+        self.amount = amount
+        self.currency = currency
+        self.status = status
+        self.payment_id = payment_id
+        self.signature = signature
 
     def to_dict(self):
         return {
